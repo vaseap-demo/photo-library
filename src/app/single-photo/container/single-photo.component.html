@@ -1,0 +1,10 @@
+<div class="image-page-container">
+  <ng-container *ngIf="image$ | async as image">
+    <div class="full-image">
+      <img [src]="image.path" alt="singe-photo-page" />
+    </div>
+    <div class="action-buttons">
+      <button mat-raised-button color="primary" (click)="removeFromFavorites(image.id)">Remove from favorites</button>
+    </div>
+  </ng-container>
+</div>

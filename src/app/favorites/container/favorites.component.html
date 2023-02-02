@@ -1,0 +1,10 @@
+<ng-container *ngIf="images$ | async as images">
+  <ng-container *ngIf="images.length > 0; else noData">
+    <app-photo-list [images]="images" (imageClicked)="navigateToImagePage($event.id)"></app-photo-list>
+  </ng-container>
+</ng-container>
+<ng-template #noData>
+  <div class="no-data">
+    <h3>No favorite photos have been added yet</h3>
+  </div>
+</ng-template>

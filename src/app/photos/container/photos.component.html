@@ -1,0 +1,10 @@
+<div class="photos-main-container">
+  <ng-container *ngIf="images$ | async as images">
+    <app-photo-list
+      appInfiniteScroll
+      (scrolled)="next()"
+      [images]="images"
+      (imageClicked)="selectAnImage($event)"></app-photo-list>
+  </ng-container>
+  <app-loader [visible]="loading$ | async"></app-loader>
+</div>

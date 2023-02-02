@@ -1,0 +1,14 @@
+.image-page-container {
+  .full-image {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+}

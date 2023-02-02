@@ -1,0 +1,7 @@
+<div class="photos-list-container">
+  <ng-container *ngFor="let image of images">
+    <div class="photo-container" (click)="imageSelected(image)" [@inOutAnimation]>
+      <img [src]="image.path" alt="image-random"/>
+    </div>
+  </ng-container>
+</div>
